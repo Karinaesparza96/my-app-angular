@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-app';
+  // data:any = null
+
+  // constructor(private observableService: ObservableService){
+  //   this.observableService.getObservable().subscribe({
+  //     next: (newvalue) => this.data = newvalue
+  //   })
+  // }
+
+  // mudaValorDoObservable(){
+  //   const newvalue = {name: 'joao'}
+  //   this.observableService.setObservable(newvalue)
+  // }
+  title = 'my-app'
+
 }

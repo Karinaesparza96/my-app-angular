@@ -1,0 +1,35 @@
+
+.heroes {
+  list-style-type: none;
+  min-height: 30vh;
+}
+.heroes li {
+  position: relative;
+  cursor: pointer;
+  width: 50%;
+  margin-bottom: 5px;
+}
+.heroes li:hover{
+  background-color: rgb(243, 234, 234);
+}
+
+button.delete {
+  position: absolute;
+  height: 100%;
+  right: 0px;
+  top: 0px;
+  margin: 0;
+  padding: 1px 10px 3px 10px;
+}
+
+#btn-add{
+  position: absolute;
+  right: -100px;
+  top: 25px;
+
+}
+a {
+  text-decoration: none;
+  color: black;
+  display: list-item;
+}

@@ -1,0 +1,30 @@
+
+.alert {
+  min-height: 67px;
+  width: 300px;
+  max-width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  color: #333C48;
+  margin: 10px auto;
+  text-align: center;
+  font-weight: bold;
+  transition: transform 0.05s;
+}
+
+.alert-success{
+background-color: rgba(62, 189, 97, 0.2);
+  border: 2px solid #3ebd61
+}
+
+.alert-danger{
+  background-color: rgba(236, 77, 43, 0.2);
+  border: 2px solid #EF9400;
+}
+
+.alert .close:hover{
+  transform: scale(1.3);
+}
+

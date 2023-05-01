@@ -1,0 +1,32 @@
+<div *ngIf="hero" class="m-3" id="hero-detail">
+  <h2>{{ hero.name | uppercase }} Details</h2>
+  <div><span>id: </span>{{ hero.id }}</div>
+  <div>
+    <label for="hero-name" class="p-2">Hero name: </label>
+    <input
+    id="hero-name"
+    [(ngModel)]="hero.name"
+    placeholder="name"
+    [libFocus]="true"
+    />
+  </div>
+  <button
+  class="btn btn-outline-dark"
+  type="button"
+  (click)="goBack()">
+  < Voltar
+  </button>
+  <button
+  class="btn btn-outline-success"
+  type="button"
+  (click)="save()"
+  >
+  Save
+</button>
+</div>
+<!-- <ng-template #modalSalvar>
+  <div class="modal-body text-center">
+    <button class="close btn-close" (click)="closed()"></button>
+  </div>
+</ng-template> -->
+

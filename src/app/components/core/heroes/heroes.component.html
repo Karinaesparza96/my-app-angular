@@ -1,0 +1,60 @@
+<h2 class="text-left m-4" *ngIf="heroes; else loading">
+  My Heroes
+</h2>
+<div class="list-group">
+  <ul class="heroes">
+    <li
+      *ngFor="let hero of heroes"
+      class="list-group-item list-group-item-action roudend"
+    >
+      <a routerLink="/detail/{{ hero.id }}" class="position-relative">
+        <span class="bagde">{{ hero.id }}</span> {{ hero.name }}
+      </a>
+      <button
+        type="button"
+        class="delete btn btn-outline-danger"
+        title="delete hero"
+        (click)="delete(hero)"
+      >
+        Delete
+      </button>
+    </li>
+  </ul>
+  <ng-template #loading>
+    <span class="m-4">Carregando Herois...</span>
+  </ng-template>
+  <div class="row justify-content-center">
+    <div class="col-sm-4 position-relative">
+      <label for="new-hero"> Hero name: </label>
+      <input
+        class="form-control"
+        type="text"
+        id="new-hero"
+        #heroName
+        placeholder="Add new hero"
+        [libFocus]="true"
+      />
+
+      <button
+        id="btn-add"
+        type="button"
+        class="btn btn-primary"
+        (click)="add(heroName.value); heroName.value = ''"
+      >
+        Add Hero
+      </button>
+    </div>
+  </div>
+</div>
+  <app-alert></app-alert>
+<ng-template #deleteModal>
+  <div class="modal-body text-center">
+    <p>Este registro será excluido,<br><span>deseja prosseguir?</span></p>
+    <button type="button" class="btn btn-default" (click)="confirmDelete()">
+      Sim
+    </button>
+    <button type="button" class="btn btn-primary" (click)="declineDelete()">
+      Cancelar
+    </button>
+  </div>
+</ng-template>
